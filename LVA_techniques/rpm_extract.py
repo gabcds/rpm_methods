@@ -5,7 +5,7 @@ from scipy import signal, interpolate
 import json
 import matplotlib.pyplot as plt
 
-
+fs = 102400
 def rpm_detection(waveform, fs, rpm_estimate, band=30, method="hybrid"):
     """Detection of rotation speed
 

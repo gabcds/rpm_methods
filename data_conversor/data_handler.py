@@ -17,7 +17,7 @@ class AeroPropCase:
     class Shaft:
         def __init__(self):
             self.rpm_inst = []
-            self.enconder = []
+            self.encoder = []
             self.time_taco = []
             self.fx = []
             self.fy = []
@@ -113,10 +113,10 @@ class AeroPropCase:
             self.shaft.fs = file.attrs['fs_taco']
 
             # Iterate through each force and torques
-            if 'rpm_inst' in file:
-                self.shaft.rpm_inst = np.array(file['rpm_inst'])
-            if 'enconder' in file:
-                self.shaft.enconder = np.array(file['encoder'])
+            #if 'rpm_inst' in file:
+                #self.shaft.rpm_inst = np.array(file['rpm_inst'])
+            #if 'encoder' in file:
+            self.shaft.encoder = np.array(file['encoder'])
             self.shaft.time_taco = np.array(file['Time taco'])
             for x in ["Fx", "Fy", "Fz", "Tx", "Ty", "Tz"]:
                 if x in file:
